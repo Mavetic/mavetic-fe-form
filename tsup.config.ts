@@ -11,9 +11,13 @@ export default defineConfig({
   ],
 
   target: "ES2020",
-  external: ["react", "@mui/material"],
+  external: ["react", "react-dom", "@mui/material"],
   splitting: false,
   treeshake: false,
   dts: true,
   format: ["esm", "cjs"],
+  esbuildOptions(options) {
+    options.jsx = "automatic";
+    options.jsxImportSource = "react";
+  },
 });
