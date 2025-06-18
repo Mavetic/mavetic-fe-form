@@ -36,6 +36,7 @@
     "build": "tsup",
     "lint": "biome check --write",
     "prepare": "husky",
+    "story": "ladle serve",
     "test": "vitest run"
   },
   "peerDependencies": {
@@ -53,6 +54,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@ladle/react": "^5.0.3",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
