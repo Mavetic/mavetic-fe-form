@@ -11,9 +11,9 @@ export default defineConfig({
   ],
 
   target: "ES2020",
-  external: ["react", "react-dom", "@mui/material"],
-  splitting: false,
-  treeshake: false,
+  external: ["react", "react-dom", "@mui/material", "@tanstack/react-form"],
+  splitting: true,
+  treeshake: true,
   dts: true,
   format: ["esm", "cjs"],
   esbuildOptions(options) {
