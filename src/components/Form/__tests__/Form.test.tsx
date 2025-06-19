@@ -1,21 +1,15 @@
-import { useAppForm } from "@/hooks";
-import { formOptions } from "@tanstack/react-form";
-import { render, renderHook, screen } from "@testing-library/react";
+import Form from "@/components/Form";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 describe("Form", () => {
-  const formProps = formOptions({ defaultValues: {}, onSubmit: () => {} });
-  const { result } = renderHook(() => useAppForm({ ...formProps }));
+  const formProps = { defaultValues: {}, onSubmit: () => {} };
 
   it("renders form component with test content", () => {
-    const form = result.current;
-
     render(
-      <form.AppForm>
-        <form.Form>
-          <div>TEST</div>
-        </form.Form>
-      </form.AppForm>,
+      <Form {...formProps}>
+        <div>TEST</div>
+      </Form>,
     );
 
     expect(screen.getByText("TEST")).toBeInTheDocument();
