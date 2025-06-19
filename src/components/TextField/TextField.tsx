@@ -1,16 +1,21 @@
 import type { TextFieldComponentProps } from "@/components/TextField/TextFieldComponent";
 import { useAppFormContext } from "@/context";
+import type { UseAppForm } from "@/hooks";
 
 export type TextFieldProps = {
-  name: string;
-} & Omit<TextFieldComponentProps, "name">;
+  formFieldProps: Omit<
+    React.ComponentProps<UseAppForm["AppField"]>,
+    "children"
+  >;
+  textFieldProps: TextFieldComponentProps;
+};
 
-const TextField = ({ name, ...props }: TextFieldProps) => {
+const TextField = ({ formFieldProps, textFieldProps }: TextFieldProps) => {
   const form = useAppFormContext();
 
   return (
-    <form.AppField name={name}>
-      {(field) => <field.TextField {...props} />}
+    <form.AppField {...formFieldProps}>
+      {(field) => <field.TextField {...textFieldProps} />}
     </form.AppField>
   );
 };

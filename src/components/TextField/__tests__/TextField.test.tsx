@@ -12,7 +12,10 @@ describe("TextField", () => {
   it("renders textbox component with label", async () => {
     render(
       <Form {...formProps}>
-        <TextField name={"test"} label="Test" required={false} />
+        <TextField
+          formFieldProps={{ name: "test" }}
+          textFieldProps={{ label: "Test", required: false }}
+        />
       </Form>,
     );
 

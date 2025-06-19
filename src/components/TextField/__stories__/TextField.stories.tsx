@@ -8,7 +8,12 @@ const formProps = {
 };
 
 export const Simple: Story = () => {
-  return <TextField name="test" label="Test" />;
+  return (
+    <TextField
+      formFieldProps={{ name: "test" }}
+      textFieldProps={{ label: "Test" }}
+    />
+  );
 };
 
 export default { decorators: [formDecorator(formProps)] };
