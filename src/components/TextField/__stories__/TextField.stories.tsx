@@ -1,4 +1,4 @@
-import { useFormContext } from "@/context";
+import TextField from "@/components/TextField";
 import formDecorator from "@/stories/decorators/formDecorator";
 import type { Story } from "@ladle/react";
 
@@ -8,13 +8,7 @@ const formProps = {
 };
 
 export const Simple: Story = () => {
-  const form = useFormContext();
-
-  return (
-    <form.AppField name="test">
-      {(field) => <field.TextField label="Test" />}
-    </form.AppField>
-  );
+  return <TextField name="test" label="Test" />;
 };
 
 export default { decorators: [formDecorator(formProps)] };

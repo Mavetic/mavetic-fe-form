@@ -1,10 +1,14 @@
-import Form from "@/components/Form";
+import Form from "@/components/Form/FormComponent";
 import { fieldContext, formContext } from "@/context";
 import { createFormHook } from "@tanstack/react-form";
 import { lazy } from "react";
 
-const SubmitButton = lazy(() => import("@/components/SubmitButton"));
-const TextField = lazy(() => import("@/components/TextField"));
+const SubmitButton = lazy(
+  () => import("@/components/SubmitButton/SubmitButtonComponent"),
+);
+const TextField = lazy(
+  () => import("@/components/TextField/TextFieldComponent"),
+);
 
 export const { useAppForm } = createFormHook({
   fieldComponents: {
@@ -17,3 +21,5 @@ export const { useAppForm } = createFormHook({
   fieldContext,
   formContext,
 });
+
+export type UseAppForm = ReturnType<typeof useAppForm>;

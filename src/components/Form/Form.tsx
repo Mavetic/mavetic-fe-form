@@ -1,29 +1,20 @@
-import { useFormContext } from "@/context";
-import Box from "@mui/material/Box";
-import type { SxProps } from "@mui/system";
+import type FormComponent from "@/components/Form/FormComponent";
+import { useAppForm } from "@/hooks";
+import { formOptions } from "@tanstack/react-form";
 import type React from "react";
 
-const Form = ({
-  children,
-  sx,
-}: {
-  children: React.ReactNode;
-  sx?: SxProps | undefined;
-}) => {
-  const form = useFormContext();
+type FormProps = React.ComponentProps<typeof FormComponent> &
+  Parameters<typeof formOptions>[0];
+
+const Form = ({ children, sx, ...formProps }: FormProps) => {
+  const preparedFormProps = formOptions(formProps);
+
+  const form = useAppForm({ ...preparedFormProps });
+
   return (
-    <Box
-      component="form"
-      onSubmit={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        form.handleSubmit();
-      }}
-      noValidate
-      sx={sx}
-    >
-      {children}
-    </Box>
+    <form.AppForm>
+      <form.Form sx={sx}>{children}</form.Form>
+    </form.AppForm>
   );
 };
 

@@ -1,19 +1,10 @@
-import { useAppForm } from "@/hooks";
-import type { Story } from "@ladle/react";
-import type { StoryDecorator } from "@ladle/react/lib/shared/types";
-import { formOptions } from "@tanstack/react-form";
+import Form from "@/components/Form";
+import type { Story, StoryDecorator } from "@ladle/react";
+import type { formOptions } from "@tanstack/react-form";
 
-export default (formProps): StoryDecorator =>
-  (Component: Story) => {
-    const preparedFormProps = formOptions(formProps);
-
-    const form = useAppForm({ ...preparedFormProps });
-
-    return (
-      <form.AppForm>
-        <form.Form>
-          <Component />
-        </form.Form>
-      </form.AppForm>
-    );
-  };
+export default (formProps: Parameters<typeof formOptions>[0]): StoryDecorator =>
+  (Component: Story) => (
+    <Form {...formProps}>
+      <Component />
+    </Form>
+  );

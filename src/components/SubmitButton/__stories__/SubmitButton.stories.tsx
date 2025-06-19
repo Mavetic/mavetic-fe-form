@@ -1,4 +1,5 @@
-import { useFormContext } from "@/context";
+import SubmitButton from "@/components/SubmitButton";
+import { useAppFormContext } from "@/context";
 import formDecorator from "@/stories/decorators/formDecorator";
 import type { Story } from "@ladle/react";
 
@@ -10,9 +11,7 @@ const formProps = {
 };
 
 export const Simple: Story = () => {
-  const form = useFormContext();
-
-  return <form.SubmitButton label="Test" />;
+  return <SubmitButton label="Test" />;
 };
 
 export default { decorators: [formDecorator(formProps)] };
