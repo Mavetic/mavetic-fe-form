@@ -1,5 +1,7 @@
 import Datepicker from "@/components/Datepicker";
 import Form from "@/components/Form";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
@@ -12,13 +14,15 @@ describe("Datepicker", () => {
   it("renders datepicker component with label", async () => {
     render(
       <Form {...formProps}>
-        <Datepicker
-          formFieldProps={{ name: "test" }}
-          datepickerProps={{
-            label: "Test",
-            textFieldProps: { required: false },
-          }}
-        />
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <Datepicker
+            formFieldProps={{ name: "test" }}
+            datepickerProps={{
+              label: "Test",
+              textFieldProps: { required: false },
+            }}
+          />
+        </LocalizationProvider>
       </Form>,
     );
 
