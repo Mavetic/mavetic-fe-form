@@ -41,7 +41,7 @@
   },
   "description": "FE base form library",
   "scripts": {
-    "build": "tsup",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' tsup",
     "lint": "biome check --write",
     "prepare": "husky",
     "story": "ladle serve",
@@ -72,6 +72,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.5.1",
+    "cross-env": "^7.0.3",
     "happy-dom": "^17.6.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
