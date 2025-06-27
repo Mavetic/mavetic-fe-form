@@ -10,6 +10,10 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
+    "./components/Autocomplete": {
+      "import": "./dist/components/Autocomplete/index.mjs",
+      "require": "./dist/components/Autocomplete/index.js"
+    },
     "./components/SubmitButton": {
       "import": "./dist/components/SubmitButton/index.mjs",
       "require": "./dist/components/SubmitButton/index.js"

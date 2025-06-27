@@ -3,6 +3,9 @@ import { fieldContext, formContext } from "@/context";
 import { createFormHook } from "@tanstack/react-form";
 import { lazy } from "react";
 
+const Autocomplete = lazy(
+  () => import("@/components/Autocomplete/AutocompleteComponent"),
+);
 const SubmitButton = lazy(
   () => import("@/components/SubmitButton/SubmitButtonComponent"),
 );
@@ -12,6 +15,7 @@ const TextField = lazy(
 
 export const { useAppForm } = createFormHook({
   fieldComponents: {
+    Autocomplete,
     TextField,
   },
   formComponents: {
