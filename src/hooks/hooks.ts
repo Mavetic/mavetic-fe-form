@@ -6,6 +6,9 @@ import { lazy } from "react";
 const Autocomplete = lazy(
   () => import("@/components/Autocomplete/AutocompleteComponent"),
 );
+const Datepicker = lazy(
+  () => import("@/components/Datepicker/DatepickerComponent"),
+);
 const SubmitButton = lazy(
   () => import("@/components/SubmitButton/SubmitButtonComponent"),
 );
@@ -16,6 +19,7 @@ const TextField = lazy(
 export const { useAppForm } = createFormHook({
   fieldComponents: {
     Autocomplete,
+    Datepicker,
     TextField,
   },
   formComponents: {
