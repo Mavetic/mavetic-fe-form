@@ -1,10 +1,10 @@
-import { useFieldContext } from "@/context";
-import { getErrorMessage } from "@/utils";
 import MuiAutocomplete, {
   type AutocompleteProps,
 } from "@mui/material/Autocomplete";
 import MuiTextField, { type TextFieldProps } from "@mui/material/TextField";
 import { useStore } from "@tanstack/react-form";
+import { useFieldContext } from "@/context";
+import { getErrorMessage } from "@/utils";
 
 export type CustomAutocompleteProps = AutocompleteProps<
   string,
@@ -52,7 +52,7 @@ const AutocompleteComponent = ({
           {...textFieldProps}
         />
       )}
-      onChange={(e, value) => {
+      onChange={(_e, value) => {
         field.handleChange(value);
         onChange?.(value);
       }}

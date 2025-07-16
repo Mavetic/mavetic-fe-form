@@ -1,7 +1,7 @@
-import Autocomplete from "@/components/Autocomplete";
-import Form from "@/components/Form";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import Autocomplete from "@/components/Autocomplete";
+import Form from "@/components/Form";
 
 describe("Autocomplete", () => {
   const formProps = {

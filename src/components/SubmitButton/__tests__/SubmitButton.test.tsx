@@ -1,8 +1,8 @@
-import Form from "@/components/Form";
-import SubmitButton from "@/components/SubmitButton";
 import { render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
+import Form from "@/components/Form";
+import SubmitButton from "@/components/SubmitButton";
 
 describe("SubmitButton", () => {
   const submitMock = vi.fn();

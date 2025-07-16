@@ -1,6 +1,6 @@
-import Form from "@/components/Form";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import Form from "@/components/Form";
 
 describe("Form", () => {
   const formProps = { defaultValues: {}, onSubmit: () => {} };

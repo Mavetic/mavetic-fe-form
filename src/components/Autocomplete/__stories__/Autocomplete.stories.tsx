@@ -1,6 +1,6 @@
+import type { Story } from "@ladle/react";
 import Autocomplete from "@/components/Autocomplete";
 import formDecorator from "@/stories/decorators/formDecorator";
-import type { Story } from "@ladle/react";
 
 const formProps = {
   defaultValues: { test: "" },

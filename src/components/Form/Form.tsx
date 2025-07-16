@@ -1,7 +1,7 @@
-import type FormComponent from "@/components/Form/FormComponent";
-import { useAppForm } from "@/hooks";
 import { formOptions } from "@tanstack/react-form";
 import type React from "react";
+import type FormComponent from "@/components/Form/FormComponent";
+import { useAppForm } from "@/hooks";
 
 type FormProps = React.ComponentProps<typeof FormComponent> &
   Parameters<typeof formOptions>[0];
