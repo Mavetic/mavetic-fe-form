@@ -2,22 +2,38 @@ import type { AutocompleteComponentProps } from "@/components/Autocomplete/Autoc
 import { useAppFormContext } from "@/context";
 import type { UseAppForm } from "@/hooks";
 
-export type AutocompleteProps = {
+export type AutocompleteProps<
+  T = unknown,
+  Multiple extends boolean | undefined = false,
+  DisableClearable extends boolean | undefined = false,
+  FreeSolo extends boolean | undefined = false,
+> = {
   formFieldProps: Omit<
     React.ComponentProps<UseAppForm["AppField"]>,
     "children"
   >;
-  autocompleteProps: AutocompleteComponentProps;
+  autocompleteProps: AutocompleteComponentProps<
+    T,
+    Multiple,
+    DisableClearable,
+    FreeSolo
+  >;
 };
 
-const Autocomplete = ({
+const Autocomplete = <
+  T = unknown,
+  Multiple extends boolean | undefined = false,
+  DisableClearable extends boolean | undefined = false,
+  FreeSolo extends boolean | undefined = false,
+>({
   formFieldProps,
   autocompleteProps,
-}: AutocompleteProps) => {
+}: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) => {
   const form = useAppFormContext();
 
   return (
     <form.AppField {...formFieldProps}>
+      {/* @ts-expect-error Autocomplete component has incompatible types (unknown vs T) */}
       {(field) => <field.Autocomplete {...autocompleteProps} />}
     </form.AppField>
   );
