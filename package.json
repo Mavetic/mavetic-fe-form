@@ -1,6 +1,6 @@
 {
   "name": "@mavetic/mavetic-fe-form",
-  "version": "0.0.10",
+  "version": "0.11.0",
   "packageManager": "pnpm@10.11.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
