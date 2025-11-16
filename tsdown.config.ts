@@ -1,7 +1,7 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
+  entry: ["src/index.ts", "src/components/*/index.ts"],
   target: "ES2020",
   skipNodeModulesBundle: true,
   unbundle: true,
