@@ -7,13 +7,16 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "types": "./dist/index.d.mts"
     },
     "./components/*": {
       "import": "./dist/components/*/index.mjs",
       "types": "./dist/components/*/index.d.mts"
     }
   },
+  "files": [
+    "dist"
+  ],
   "description": "FE base form library",
   "scripts": {
     "build": "tsdown",
