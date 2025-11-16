@@ -11,7 +11,7 @@ jobs:
       NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
 
       - name: Set package repo auth to .npmrc file
         run: |
