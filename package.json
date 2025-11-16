@@ -73,7 +73,7 @@
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^5.0.0",
     "cross-env": "^7.0.3",
-    "happy-dom": "^18.0.1",
+    "happy-dom": "^20.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "tsup": "^8.5.0",
