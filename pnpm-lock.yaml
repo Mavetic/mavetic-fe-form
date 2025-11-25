@@ -17,9 +17,6 @@ importers:
       '@emotion/styled':
         specifier: ^11.14.1
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react@19.2.0)
-      '@mavetic/mavetic-fe-core':
-        specifier: 0.0.13
-        version: 0.0.13(@biomejs/biome@2.3.5)(@testing-library/jest-dom@6.9.1)(@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@testing-library/user-event@14.6.1(@testing-library/dom@10.4.0))(@types/node@24.10.1)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(@vitejs/plugin-react@5.1.1(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1)))(happy-dom@20.0.10)(husky@9.1.7)(lint-staged@16.2.6)(next@16.0.3(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)(vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1)))(vitest@4.0.9(@types/debug@4.1.12)(@types/node@24.10.1)(happy-dom@20.0.10)(msw@2.12.2(@types/node@24.10.1)(typescript@5.9.3))(yaml@2.8.1))
       '@mui/icons-material':
         specifier: ^7.2.0
         version: 7.2.0(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@types/react@19.2.0)(react@19.2.0)
@@ -57,6 +54,9 @@ importers:
       '@ladle/react':
         specifier: ^5.0.3
         version: 5.1.1(@types/node@24.10.1)(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)(yaml@2.8.1)
+      '@mavetic/mavetic-fe-core':
+        specifier: 0.0.14
+        version: 0.0.14
       '@testing-library/jest-dom':
         specifier: ^6.6.3
         version: 6.9.1
@@ -715,26 +715,8 @@ packages:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
 
-  '@mavetic/mavetic-fe-core@0.0.13':
-    resolution: {integrity: sha512-nwELz9wN1vZjKx7UfcHOo3UzIANjwTrSJA8c1vZTUwA7b61dgmYGSDhsumTojTTtNWip8j/RWIqE/ifC7O69Pg==, tarball: https://npm.pkg.github.com/download/@mavetic/mavetic-fe-core/0.0.13/5b44fba1e3e49926cc1c65bb6f971aedae7ad783}
-    peerDependencies:
-      '@biomejs/biome': ^2.2.4
-      '@testing-library/jest-dom': ^6.8.0
-      '@testing-library/react': ^16.3.0
-      '@testing-library/user-event': ^14.6.1
-      '@types/node': ^24.3.1
-      '@types/react': 19.2.0
-      '@types/react-dom': 19.2.0
-      '@vitejs/plugin-react': ^5.0.0
-      happy-dom: ^20.0.0
-      husky: ^9.1.7
-      lint-staged: ^16.1.2
-      next: ^16.0.0
-      react: 19.2.0
-      react-dom: 19.2.0
-      typescript: ^5.9.2
-      vite-tsconfig-paths: ^5.1.4
-      vitest: ^4.0.0
+  '@mavetic/mavetic-fe-core@0.0.14':
+    resolution: {integrity: sha512-fIWjEJ8Laec6NWRhiu1Nd5IcYGo1N7qtnEwhUhD41xNptQMUo47AVHPtcOYJIlGG9Wr8RCBhEebm2hk4x0fzww==, tarball: https://npm.pkg.github.com/download/@mavetic/mavetic-fe-core/0.0.14/3868ad3d19075f50829b896a6926673415d26083}
 
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
@@ -3928,25 +3910,7 @@ snapshots:
       - typescript
       - yaml
 
-  '@mavetic/mavetic-fe-core@0.0.13(@biomejs/biome@2.3.5)(@testing-library/jest-dom@6.9.1)(@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@testing-library/user-event@14.6.1(@testing-library/dom@10.4.0))(@types/node@24.10.1)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(@vitejs/plugin-react@5.1.1(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1)))(happy-dom@20.0.10)(husky@9.1.7)(lint-staged@16.2.6)(next@16.0.3(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)(vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1)))(vitest@4.0.9(@types/debug@4.1.12)(@types/node@24.10.1)(happy-dom@20.0.10)(msw@2.12.2(@types/node@24.10.1)(typescript@5.9.3))(yaml@2.8.1))':
-    dependencies:
-      '@biomejs/biome': 2.3.5
-      '@testing-library/jest-dom': 6.9.1
-      '@testing-library/react': 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.0)
-      '@types/node': 24.10.1
-      '@types/react': 19.2.0
-      '@types/react-dom': 19.2.0(@types/react@19.2.0)
-      '@vitejs/plugin-react': 5.1.1(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1))
-      happy-dom: 20.0.10
-      husky: 9.1.7
-      lint-staged: 16.2.6
-      next: 16.0.3(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
-      typescript: 5.9.3
-      vite-tsconfig-paths: 5.1.4(typescript@5.9.3)(vite@7.0.4(@types/node@24.10.1)(yaml@2.8.1))
-      vitest: 4.0.9(@types/debug@4.1.12)(@types/node@24.10.1)(happy-dom@20.0.10)(msw@2.12.2(@types/node@24.10.1)(typescript@5.9.3))(yaml@2.8.1)
+  '@mavetic/mavetic-fe-core@0.0.14': {}
 
   '@mdx-js/mdx@3.1.1':
     dependencies:
