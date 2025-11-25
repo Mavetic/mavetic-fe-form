@@ -33,7 +33,6 @@ const Autocomplete = <
 
   return (
     <form.AppField {...formFieldProps}>
-      {/* @ts-expect-error Autocomplete component has incompatible types (unknown vs T) */}
       {(field) => <field.Autocomplete {...autocompleteProps} />}
     </form.AppField>
   );

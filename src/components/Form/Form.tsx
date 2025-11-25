@@ -1,16 +1,12 @@
-import { formOptions } from "@tanstack/react-form";
 import type React from "react";
 import type FormComponent from "@/components/Form/FormComponent";
-import { useAppForm } from "@/hooks";
+import type { UseAppForm } from "@/hooks";
 
-type FormProps = React.ComponentProps<typeof FormComponent> &
-  Parameters<typeof formOptions>[0];
+type FormProps = React.ComponentProps<typeof FormComponent> & {
+  form: UseAppForm;
+};
 
-const Form = ({ children, sx, ...formProps }: FormProps) => {
-  const preparedFormProps = formOptions(formProps);
-
-  const form = useAppForm({ ...preparedFormProps });
-
+const Form = ({ children, sx, form }: FormProps) => {
   return (
     <form.AppForm>
       <form.Form sx={sx}>{children}</form.Form>

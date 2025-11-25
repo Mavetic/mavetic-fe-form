@@ -16,7 +16,7 @@ const TextField = lazy(
   () => import("@/components/TextField/TextFieldComponent"),
 );
 
-export const { useAppForm } = createFormHook({
+const { useAppForm: _appForm } = createFormHook({
   fieldComponents: {
     Autocomplete,
     Datepicker,
@@ -29,5 +29,9 @@ export const { useAppForm } = createFormHook({
   fieldContext,
   formContext,
 });
+
+// @ts-expect-error type duplicate error, because of type simplification
+export const useAppForm: ReturnType<typeof createFormHook>["useAppForm"] =
+  _appForm;
 
 export type UseAppForm = ReturnType<typeof useAppForm>;
