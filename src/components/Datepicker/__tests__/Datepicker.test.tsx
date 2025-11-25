@@ -1,19 +1,24 @@
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { render, screen } from "@testing-library/react";
+import { render, renderHook, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import Datepicker from "@/components/Datepicker";
 import Form from "@/components/Form";
+import { type UseAppForm, useAppForm } from "@/hooks";
 
 describe("Datepicker", () => {
-  const formProps = {
-    defaultValues: { test: "" },
-    onSubmit: () => {},
-  };
+  const { result } = renderHook(() =>
+    useAppForm({
+      defaultValues: { test: "" },
+      onSubmit: () => {},
+    }),
+  );
+
+  const form = result.current as UseAppForm;
 
   it("renders datepicker component with label", async () => {
     render(
-      <Form {...formProps}>
+      <Form form={form}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <Datepicker
             formFieldProps={{ name: "test" }}

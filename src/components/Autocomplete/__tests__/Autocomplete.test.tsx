@@ -1,13 +1,18 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, renderHook, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import Autocomplete from "@/components/Autocomplete";
 import Form from "@/components/Form";
+import { type UseAppForm, useAppForm } from "@/hooks";
 
 describe("Autocomplete", () => {
-  const formProps = {
-    defaultValues: { test: "" },
-    onSubmit: () => {},
-  };
+  const { result } = renderHook(() =>
+    useAppForm({
+      defaultValues: { test: "" },
+      onSubmit: () => {},
+    }),
+  );
+
+  const form = result.current as UseAppForm;
 
   afterEach(() => {
     cleanup();
@@ -15,7 +20,7 @@ describe("Autocomplete", () => {
 
   it("renders autocomplete component with label", async () => {
     render(
-      <Form {...formProps}>
+      <Form form={form}>
         <Autocomplete
           formFieldProps={{ name: "test" }}
           autocompleteProps={{
@@ -33,7 +38,7 @@ describe("Autocomplete", () => {
 
   it("renders autocomplete component with object options", async () => {
     render(
-      <Form {...formProps}>
+      <Form form={form}>
         <Autocomplete
           formFieldProps={{ name: "test" }}
           autocompleteProps={{
