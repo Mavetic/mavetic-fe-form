@@ -5,10 +5,7 @@ import { type UseAppForm, useAppForm } from "@/hooks";
 
 export default (formProps: Parameters<typeof formOptions>[0]): StoryDecorator =>
   (Component: Story) => {
-    const form = useAppForm({
-      defaultValues: { test: "" },
-      onSubmit: () => {},
-    }) as UseAppForm;
+    const form = useAppForm(formProps) as UseAppForm;
 
     return (
       <Form form={form}>
