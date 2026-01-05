@@ -26,14 +26,14 @@ pnpm add @mavetic/mavetic-fe-form
 You must also install the peer dependencies in your app:
 
 ```
-pnpm add react@19 react-dom@19 @tanstack/react-form @mui/material @mui/icons-material @mui/system @mui/x-date-pickers @emotion/react @emotion/styled @emotion/cache date-fns
+pnpm add react@19 react-dom@19 @tanstack/react-form @mui/material @mui/system @mui/x-date-pickers @emotion/react @emotion/styled @emotion/cache date-fns
 ```
 
 Peer versions used in this library (minimums):
 - react: 19.2.0
 - react-dom: 19.2.0
 - @tanstack/react-form: ^1.14.1
-- @mui/material, @mui/system, @mui/icons-material: ^7.2.0
+- @mui/material, @mui/system: ^7.2.0
 - @mui/x-date-pickers: ^8.7.0
 - @emotion/react, @emotion/styled, @emotion/cache: ^11.14.x
 - date-fns: ^4.1.0
