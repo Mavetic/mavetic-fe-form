@@ -8,16 +8,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
+      NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v6
-
-      - name: Set package repo auth to .npmrc file
-        run: |
-          echo -e "\n//npm.pkg.github.com/:_authToken=${{ env.NODE_AUTH_TOKEN }}" >> .npmrc
-
       - uses: pnpm/action-setup@v4.2.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: pnpm install
