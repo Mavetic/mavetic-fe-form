@@ -71,7 +71,7 @@ importers:
         version: 5.1.2(vite@7.3.1(@types/node@24.10.9)(yaml@2.8.2))
       happy-dom:
         specifier: ^20.0.0
-        version: 20.3.1
+        version: 20.3.3
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -89,7 +89,7 @@ importers:
         version: 5.1.4(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.9)(yaml@2.8.2))
       vitest:
         specifier: ^4.0.0
-        version: 4.0.17(@types/node@24.10.9)(happy-dom@20.3.1)(msw@2.12.2(@types/node@24.10.9)(typescript@5.9.3))(yaml@2.8.2)
+        version: 4.0.17(@types/node@24.10.9)(happy-dom@20.3.3)(msw@2.12.2(@types/node@24.10.9)(typescript@5.9.3))(yaml@2.8.2)
 
 packages:
 
@@ -1482,9 +1482,6 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@20.19.30':
-    resolution: {integrity: sha512-WJtwWJu7UdlvzEAUm484QNg5eAoq5QR08KDNx7g45Usrs2NtOPiX8ugDqmKdXkyL03rBqU5dYNYVQetEpBHq2g==}
-
   '@types/node@24.10.9':
     resolution: {integrity: sha512-ne4A0IpG3+2ETuREInjPNhUGis1SFjv1d5asp8MzEAGtOZeTeHVDOYqOgqfhvseqg/iXty2hjBf1zAOb7RNiNw==}
 
@@ -1957,6 +1954,10 @@ packages:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
 
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
+    engines: {node: '>=0.12'}
+
   entities@6.0.1:
     resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
     engines: {node: '>=0.12'}
@@ -2134,8 +2135,8 @@ packages:
     resolution: {integrity: sha512-DKKrynuQRne0PNpEbzuEdHlYOMksHSUI8Zc9Unei5gTsMNA2/vMpoMz/yKba50pejK56qj98qM0SjYxAKi13gQ==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
-  happy-dom@20.3.1:
-    resolution: {integrity: sha512-tLvsizNno05Hij0PoB0QN/S8xf0YU2AGvO11/JlJDw5McA/gzyn0Ni1RwbTI1/zteUbOekJH0t6q8HFvjbxsGg==}
+  happy-dom@20.3.3:
+    resolution: {integrity: sha512-hM9gltmtQLfmWPqoPreUtRdP3nZCSzQEw7l/JC+up5CxquDykhYFKzIzoFFeVev3AGFEULNvsbE8fpZPgxUYEQ==}
     engines: {node: '>=20.0.0'}
 
   has-flag@4.0.0:
@@ -3117,9 +3118,6 @@ packages:
 
   unconfig-core@7.4.2:
     resolution: {integrity: sha512-VgPCvLWugINbXvMQDf8Jh0mlbvNjNC6eSUziHsBCMpxR05OPrNrvDnyatdMjRgcHaaNsCqz+wjNXxNw1kRLHUg==}
-
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
@@ -4615,10 +4613,6 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@20.19.30':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@24.10.9':
     dependencies:
       undici-types: 7.16.0
@@ -5027,6 +5021,8 @@ snapshots:
 
   encodeurl@1.0.2: {}
 
+  entities@4.5.0: {}
+
   entities@6.0.1: {}
 
   environment@1.1.0: {}
@@ -5246,11 +5242,12 @@ snapshots:
 
   graphql@16.12.0: {}
 
-  happy-dom@20.3.1:
+  happy-dom@20.3.3:
     dependencies:
-      '@types/node': 20.19.30
+      '@types/node': 24.10.9
       '@types/whatwg-mimetype': 3.0.2
       '@types/ws': 8.18.1
+      entities: 4.5.0
       whatwg-mimetype: 3.0.0
       ws: 8.19.0
     transitivePeerDependencies:
@@ -6660,8 +6657,6 @@ snapshots:
       '@quansync/fs': 1.0.0
       quansync: 1.0.0
 
-  undici-types@6.21.0: {}
-
   undici-types@7.16.0: {}
 
   unicorn-magic@0.3.0: {}
@@ -6784,7 +6779,7 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.8.2
 
-  vitest@4.0.17(@types/node@24.10.9)(happy-dom@20.3.1)(msw@2.12.2(@types/node@24.10.9)(typescript@5.9.3))(yaml@2.8.2):
+  vitest@4.0.17(@types/node@24.10.9)(happy-dom@20.3.3)(msw@2.12.2(@types/node@24.10.9)(typescript@5.9.3))(yaml@2.8.2):
     dependencies:
       '@vitest/expect': 4.0.17
       '@vitest/mocker': 4.0.17(msw@2.12.2(@types/node@24.10.9)(typescript@5.9.3))(vite@7.3.1(@types/node@24.10.9)(yaml@2.8.2))
@@ -6808,7 +6803,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.10.9
-      happy-dom: 20.3.1
+      happy-dom: 20.3.3
     transitivePeerDependencies:
       - jiti
       - less
