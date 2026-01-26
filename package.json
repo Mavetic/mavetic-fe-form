@@ -42,7 +42,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.11",
+    "@biomejs/biome": "2.3.12",
     "@ladle/react": "^5.0.3",
     "@mavetic/mavetic-fe-core": "0.0.15",
     "@testing-library/jest-dom": "^6.6.3",
