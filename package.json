@@ -44,7 +44,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
     "@ladle/react": "^5.0.3",
-    "@mavetic/mavetic-fe-core": "0.0.15",
+    "@mavetic/mavetic-fe-core": "0.0.17",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
