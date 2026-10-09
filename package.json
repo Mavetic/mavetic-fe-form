@@ -1,7 +1,7 @@
 {
   "name": "@mavetic/mavetic-fe-form",
   "version": "0.0.18",
-  "packageManager": "pnpm@12.9.1",
+  "packageManager": "pnpm@12.10.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
